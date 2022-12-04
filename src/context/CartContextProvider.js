@@ -59,16 +59,16 @@ import React,{useReducer, createContext} from 'react';
     }
 
  }
-export const cartContext =createContext()
+export const CartContext =createContext()
 
 
 const CartContextProvider = ({children}) => {
 const[state,dispatch]=useReducer(cartReducer,initialState)
 
     return (
-        <cartContext.Provider value={{state: state,  dispatch}} >
+        <CartContext.Provider value={{state: state,  dispatch}} >
            {children}
-        </cartContext.Provider>
+        </CartContext.Provider>
     );
 };
 
