@@ -1,11 +1,12 @@
 import React from 'react';
 import { useContext } from 'react';
 import { ProductsContext } from '../context/ProductContextProvider';
-import { Link } from 'react-router-dom';
+import { Link ,useParams} from 'react-router-dom';
 import styles from "./ProductDetails.module.css"
 
 const ProductDetails = (props) => {
-    const id = props.match.params.id
+    const params = useParams()
+    const id =params.id
     const data = useContext(ProductsContext)
     const product = data[id-1]
     const {image,title,description,price,category}= product
@@ -18,7 +19,7 @@ const ProductDetails = (props) => {
            <p className={styles.category} > <span>category:</span> : {category}</p>
            <div className={styles.buttonContainer} >
             <span className={styles.price} >{price} $ </span>
-            <Link to ="/products">  back to shop</Link>
+            <Link to ="products">  back to shop</Link>
             </div>
            </div>
 

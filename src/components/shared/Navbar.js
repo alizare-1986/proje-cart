@@ -9,9 +9,9 @@ const Navbar = () => {
     return (
         <div className={styles.mainContainer} >
             <div className={styles.container} >
-                <Link className={styles.productLink} to="/products" >Products</Link>
+                <Link className={styles.productLink} to="products" >Products</Link>
                 <div className={styles.iconContainer} >
-                    <Link to="/cart" ><img src={shopIcon} alt="shop"/></Link>
+                    <Link to="cart" ><img src={shopIcon} alt="shop"/></Link>
                     <span>{state.itemsCounter}</span>
                 </div>
             </div>
