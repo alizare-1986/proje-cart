@@ -32,7 +32,7 @@ import React,{useReducer, createContext} from 'react';
             return {
                 ...state,
                 selectedItems:[...newSelectedItems],
-                ...sumItems(state.selectedItems)
+                ...sumItems(newSelectedItems)
 
             }
           case "INCREASE":
